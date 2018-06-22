@@ -566,7 +566,7 @@ static UIImage *blackArrowImage = nil, *whiteArrowImage = nil, *grayArrowImage =
         // The hierarchy and view/layer values were discovered by inspecting map kit using Reveal.app
         
         self.containerView = [UIView new];
-        self.containerView.backgroundColor = [UIColor whiteColor];
+        self.containerView.backgroundColor = [UIColor colorWithRed:245/255.0 green:250/255.0 blue:254/255.0 alpha:1.0];
         self.containerView.alpha = 0.96;
         self.containerView.layer.cornerRadius = 8;
         self.containerView.layer.shadowRadius = 30;
@@ -579,7 +579,7 @@ static UIImage *blackArrowImage = nil, *whiteArrowImage = nil, *grayArrowImage =
         
         if (!blackArrowImage) {
             blackArrowImage = [SMCalloutBackgroundView embeddedImageNamed:@"CalloutArrow"];
-            whiteArrowImage = [self image:blackArrowImage withColor:[UIColor whiteColor]];
+            whiteArrowImage = [self image:blackArrowImage withColor:[UIColor colorWithRed:245/255.0 green:250/255.0 blue:254/255.0 alpha:1.0]];
             grayArrowImage = [self image:blackArrowImage withColor:[UIColor colorWithWhite:0.85 alpha:1]];
         }
         
@@ -651,7 +651,7 @@ static UIImage *blackArrowImage = nil, *whiteArrowImage = nil, *grayArrowImage =
         self.arrowView.transform = CGAffineTransformIdentity;
     }
 }
-
+/*
 - (CALayer *)contentMask {
 
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
@@ -666,7 +666,7 @@ static UIImage *blackArrowImage = nil, *whiteArrowImage = nil, *grayArrowImage =
     layer.contents = (id)maskImage.CGImage;
     return layer;
 }
-
+*/
 @end
 
 @implementation SMCalloutBackgroundView
